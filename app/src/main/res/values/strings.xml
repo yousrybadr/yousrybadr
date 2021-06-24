@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">estshara-doctor-android</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">estshara</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home" translatable="false">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="content_description_string">logo_image_string_content_description</string>
+    <string name="app_title">estshara</string>
+    <string name="menu_change_language">Change Language</string>
+    <string name="menu_faq">FAQ</string>
+    <string name="nav_menu_active_message">You can recieve consultations</string>
+    <string name="nav_menu_active">Active</string>
+    <string name="terms_and_policies"><u>Terms and policies</u></string>
+    <string name="problem_signing_in"><u>Problem signing in</u></string>
+    <string name="helper_text_register">A verification code will be sent to this number. Make sure to type your correct phone number.</string>
+</resources>

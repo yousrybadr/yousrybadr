@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FF6161</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="colorHelperText">#959CAC</color>
+    <color name="gray">#C7C7CC</color>
+    <color name="loginTextFieldColor">#515D76</color>
+    <color name="login_background">#FFFFFF</color>
+    <color name="menu_item_tint">#FF6161</color>
+    <color name="menu_item_text_color">#DE000000</color>
+    <color name="colorAlpha">#1AFFFFFF</color>
+    <color name="colorWhiteAlpha">#B2FFFFFF</color>
+    <color name="nav_header_main_title_color">#E6FFFFFF</color>
+</resources>

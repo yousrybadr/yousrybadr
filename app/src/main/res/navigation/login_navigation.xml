@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/fragment_login"
+    android:id="@+id/start_navigation">
+
+    <fragment
+        android:id="@+id/fragment_login"
+        android:name="com.baianat.app.estshara.doctor.ui.fragments.app.login.LoginFragment"
+        tools:layout="@layout/login_fragment">
+        <action android:id="@+id/action_login_to_register"
+            app:destination="@id/fragment_register"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_register"
+        android:name="com.baianat.app.estshara.doctor.ui.fragments.app.register.RegisterFragment"
+        tools:layout="@layout/register_fragment">
+
+        <action
+            android:id="@+id/action_fragment_register_to_fragment_otp"
+            app:destination="@id/fragment_otp" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_otp"
+        android:name="com.baianat.app.estshara.doctor.ui.fragments.app.register.fragments.otp.OtpFragment"
+        tools:layout="@layout/otp_fragment">
+
+        <action
+            android:id="@+id/action_fragment_otp_to_fragment_screen1"
+            app:destination="@id/fragment_screen1" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_screen1"
+        android:name="com.baianat.app.estshara.doctor.ui.fragments.app.register.fragments.screen1.Screen1Fragment"
+        tools:layout="@layout/fragment_screen1">
+
+        <action
+            android:id="@+id/action_fragment_screen1_to_fragment_screen2"
+            app:destination="@id/fragment_screen2" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_screen2"
+        android:name="com.baianat.app.estshara.doctor.ui.fragments.app.register.fragments.screen2.Screen2Fragment"
+        tools:layout="@layout/fragment_screen2">
+
+        <action
+            android:id="@+id/action_fragment_screen2_to_fragment_screen3"
+            app:destination="@id/fragment_screen3" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_screen3"
+        android:name="com.baianat.app.estshara.doctor.ui.fragments.app.register.fragments.screen3.Screen3Fragment"
+        tools:layout="@layout/fragment_screen3">
+
+        <action
+            android:id="@+id/action_fragment_screen3_to_fragment_screen4"
+            app:destination="@id/fragment_screen4" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_screen4"
+        android:name="com.baianat.app.estshara.doctor.ui.fragments.app.register.fragments.screen4.Screen4Fragment"
+        tools:layout="@layout/fragment_screen4">
+
+        <action
+            android:id="@+id/action_fragment_screen4_to_fragment_finish"
+            app:destination="@id/fragment_finish" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_finish"
+        android:name="com.baianat.app.estshara.doctor.ui.fragments.app.register.fragments.finish.FinishFragment"
+        tools:layout="@layout/fragment_finish">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_fag"
+        android:name="com.baianat.app.estshara.doctor.ui.fragments.drawer.faq.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_change_lang"
+        android:name="com.baianat.app.estshara.doctor.ui.fragments.drawer.changelanguage.GalleryFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_gallery" />
+
+</navigation>
