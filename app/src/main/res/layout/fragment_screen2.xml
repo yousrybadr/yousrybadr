@@ -1,13 +1,162 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.fragments.app.register.fragments.screen2.Screen2Fragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <TextView
+    <data>
+        <import
+            type="com.baianat.app.estshara.doctor.R" />
+        <import type="com.baianat.app.estshara.doctor.ui.viewmodels.SharedRegisterViewModel"/>
+        <variable
+            name="viewmodel"
+            type="SharedRegisterViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Hello" />
+        android:paddingStart="@dimen/_16sdp"
+        android:paddingEnd="@dimen/_16sdp"
+        android:background="@color/login_background"
+        tools:context=".ui.fragments.register.fragments.screen2.Screen2Fragment">
 
-</FrameLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/masterTV"
+            android:layout_marginTop="@dimen/_32sdp"
+            android:textColor="@color/loginTextFieldColor"
+            android:text="@string/master_s_degree_certificate_string"
+            android:textSize="17sp"
+            android:fontFamily="@font/weight_400"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/masterView"
+            android:maxHeight="@dimen/_40sdp"
+            android:background="@drawable/shape_rec_border"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/masterTV"
+            android:layout_marginTop="@dimen/_8sdp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/upload_picture_string"
+                android:textSize="14sp"
+                app:fontFamily="@font/weight_400"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:id="@+id/uploadTV" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@+id/uploadTV"
+                app:layout_constraintBottom_toBottomOf="@+id/uploadTV"
+                app:layout_constraintStart_toEndOf="@+id/uploadTV"
+                android:src="@drawable/ic_upload_icon"
+                android:paddingEnd="@dimen/_4sdp"
+                android:paddingStart="@dimen/_4sdp"
+                android:contentDescription="@string/upload_icon_desc" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@+id/uploadTV"
+                app:layout_constraintBottom_toBottomOf="@+id/uploadTV"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:src="@drawable/ic_info"
+                android:paddingEnd="@dimen/_4sdp"
+                android:paddingStart="@dimen/_4sdp"
+                android:contentDescription="@string/upload_icon_desc" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/emailTV"
+            android:layout_marginTop="@dimen/_32sdp"
+            android:textColor="@color/loginTextFieldColor"
+            android:text="@string/syndicate_id_string"
+            android:textSize="17sp"
+            android:fontFamily="@font/weight_400"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/masterView" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/syndicateView"
+            android:maxHeight="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:background="@drawable/shape_rec_border"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/emailTV">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/upload_picture_string"
+                android:textSize="14sp"
+                app:fontFamily="@font/weight_400"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:id="@+id/upload2TV" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@+id/upload2TV"
+                app:layout_constraintBottom_toBottomOf="@+id/upload2TV"
+                app:layout_constraintStart_toEndOf="@+id/upload2TV"
+                android:src="@drawable/ic_upload_icon"
+                android:paddingStart="@dimen/_4sdp"
+                android:contentDescription="@string/upload_icon_desc" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@+id/upload2TV"
+                app:layout_constraintBottom_toBottomOf="@+id/upload2TV"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:src="@drawable/ic_info"
+                android:paddingStart="@dimen/_4sdp"
+                android:contentDescription="@string/upload_icon_desc" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/loginButton"
+            app:backgroundTint="@null"
+            android:onClick=
+                "@{() -> viewmodel.onNavigationClick(R.id.action_fragment_screen1_to_fragment_screen2)"
+            android:background="@drawable/shape_login_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="@dimen/_48sdp"
+            android:text="Continue"
+            android:elevation="4dp"
+            android:translationZ="4dp"
+            android:stateListAnimator="@null"
+            android:shadowColor="@color/black"
+            android:textSize="20sp"
+            app:fontFamily="@font/weight_700" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

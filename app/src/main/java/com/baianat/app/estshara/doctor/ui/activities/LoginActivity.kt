@@ -2,6 +2,7 @@ package com.baianat.app.estshara.doctor.ui.activities
 
 import android.os.Bundle
 import android.view.MenuItem
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.findNavController
@@ -21,9 +22,7 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        setupToolbar()
-        setTitle("Login")
-        val drawerLayout: DrawerLayout = binding.drawerLayoutLogin
+        setupNavigationDrawerAndToolbar()
         val navView: NavigationView = binding.navView
         val navController = findNavController(R.id.nav_host_fragment_content_login)
 
@@ -32,20 +31,32 @@ class LoginActivity : AppCompatActivity() {
         appBarConfiguration = AppBarConfiguration(
             setOf(
                 R.id.fragment_login  ,R.id.nav_change_lang, R.id.nav_fag
-            ), drawerLayout
+            ), binding.drawerLayoutLogin
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
     }
     
-    fun setupToolbar(){
-        setSupportActionBar(binding.appBarLogin.toolbar)
-        supportActionBar?.setDisplayShowTitleEnabled(false)
-    }
+
     fun setTitle(title: String){
         binding.appBarLogin.toolbarTitle.setText(title)
     }
 
+    fun showToolBar(){
+        binding.appBarLogin.toolbar.visibility = View.VISIBLE
+    }
+
+    fun hideToolBar(){
+        binding.appBarLogin.toolbar.visibility = View.GONE
+    }
+    private fun setupNavigationDrawerAndToolbar() {
+        setSupportActionBar(binding.appBarLogin.toolbar)
+        supportActionBar?.setDisplayShowTitleEnabled(false)
+        setTitle("Login")
+        binding.drawerLayoutLogin .apply {
+                setStatusBarBackground(R.drawable.shape_gradient_main)
+            }
+    }
 
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.nav_host_fragment_content_login)

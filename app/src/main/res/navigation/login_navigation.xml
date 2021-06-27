@@ -7,36 +7,43 @@
 
     <fragment
         android:id="@+id/fragment_login"
-        android:name="com.baianat.app.estshara.doctor.ui.fragments.app.login.LoginFragment"
-        tools:layout="@layout/login_fragment">
+        android:name="com.baianat.app.estshara.doctor.ui.fragments.login.LoginFragment"
+        tools:layout="@layout/fragment_login">
         <action android:id="@+id/action_login_to_register"
             app:destination="@id/fragment_register"
+            />
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/fragment_register"
+        android:name="com.baianat.app.estshara.doctor.ui.fragments.register.RegisterFragment"
+        tools:layout="@layout/fragment_register">
+
+        <action
+            android:id="@+id/action_fragment_register_to_fragment_otp"
+            app:destination="@id/fragment_otp"
+
             />
     </fragment>
 
     <fragment
-        android:id="@+id/fragment_register"
-        android:name="com.baianat.app.estshara.doctor.ui.fragments.app.register.RegisterFragment"
-        tools:layout="@layout/register_fragment">
-
-        <action
-            android:id="@+id/action_fragment_register_to_fragment_otp"
-            app:destination="@id/fragment_otp" />
-    </fragment>
-
-    <fragment
         android:id="@+id/fragment_otp"
-        android:name="com.baianat.app.estshara.doctor.ui.fragments.app.register.fragments.otp.OtpFragment"
-        tools:layout="@layout/otp_fragment">
+        android:name="com.baianat.app.estshara.doctor.ui.fragments.register.fragments.otp.OtpFragment"
+        tools:layout="@layout/fragment_otp">
 
         <action
             android:id="@+id/action_fragment_otp_to_fragment_screen1"
-            app:destination="@id/fragment_screen1" />
+            app:destination="@id/fragment_screen1"
+
+            />
+
     </fragment>
 
     <fragment
         android:id="@+id/fragment_screen1"
-        android:name="com.baianat.app.estshara.doctor.ui.fragments.app.register.fragments.screen1.Screen1Fragment"
+        android:name="com.baianat.app.estshara.doctor.ui.fragments.register.fragments.screen1.Screen1Fragment"
         tools:layout="@layout/fragment_screen1">
 
         <action
@@ -46,7 +53,7 @@
 
     <fragment
         android:id="@+id/fragment_screen2"
-        android:name="com.baianat.app.estshara.doctor.ui.fragments.app.register.fragments.screen2.Screen2Fragment"
+        android:name="com.baianat.app.estshara.doctor.ui.fragments.register.fragments.screen2.Screen2Fragment"
         tools:layout="@layout/fragment_screen2">
 
         <action
@@ -56,7 +63,7 @@
 
     <fragment
         android:id="@+id/fragment_screen3"
-        android:name="com.baianat.app.estshara.doctor.ui.fragments.app.register.fragments.screen3.Screen3Fragment"
+        android:name="com.baianat.app.estshara.doctor.ui.fragments.register.fragments.screen3.Screen3Fragment"
         tools:layout="@layout/fragment_screen3">
 
         <action
@@ -66,7 +73,7 @@
 
     <fragment
         android:id="@+id/fragment_screen4"
-        android:name="com.baianat.app.estshara.doctor.ui.fragments.app.register.fragments.screen4.Screen4Fragment"
+        android:name="com.baianat.app.estshara.doctor.ui.fragments.register.fragments.screen4.Screen4Fragment"
         tools:layout="@layout/fragment_screen4">
 
         <action
@@ -76,10 +83,8 @@
 
     <fragment
         android:id="@+id/fragment_finish"
-        android:name="com.baianat.app.estshara.doctor.ui.fragments.app.register.fragments.finish.FinishFragment"
-        tools:layout="@layout/fragment_finish">
-
-    </fragment>
+        android:name="com.baianat.app.estshara.doctor.ui.fragments.register.fragments.finish.FinishFragment"
+        tools:layout="@layout/fragment_finish"/>
 
     <fragment
         android:id="@+id/nav_fag"

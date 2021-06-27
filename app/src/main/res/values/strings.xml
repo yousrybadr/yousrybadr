@@ -7,6 +7,7 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
+    <string name="phone_helper_message">Please type the verification code sent \nto</string>
     <string name="menu_home" translatable="false">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
@@ -21,4 +22,23 @@
     <string name="terms_and_policies"><u>Terms and policies</u></string>
     <string name="problem_signing_in"><u>Problem signing in</u></string>
     <string name="helper_text_register">A verification code will be sent to this number. Make sure to type your correct phone number.</string>
+    <string name="send_again"><b>Send again.</b></string>
+    <string name="visivility_desc">visivility desc</string>
+    <string name="login_string">Login</string>
+    <string name="password_string">Password</string>
+    <string name="user_name_string">User Name</string>
+    <string name="new_doctor_string">New Doctor?</string>
+    <string name="email_string">Email</string>
+    <string name="full_name_string">Full Name</string>
+    <string name="master_s_degree_certificate_string">Master’s degree certificate</string>
+    <string name="syndicate_id_string">Syndicate ID</string>
+    <string name="upload_picture_string">Upload picture</string>
+    <string name="upload_icon_desc">upload icon desc</string>
+    <string name="medical_speciality_string">Medical speciality</string>
+    <string name="profession_license_string">Profession license</string>
+    <string name="helper_text_screen4">This password will be used to sign in again. Make sure you type a password you will remember.</string>
+    <string name="helper_text_finish">Wait for an estshara employee to contact you and activate your account.</string>
+    <string name="title_finish_string">You are all set!</string>
+    <string name="end_string">End</string>
+    <string name="finish_string">Finish</string>
 </resources>

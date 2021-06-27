@@ -18,16 +18,16 @@
         android:paddingStart="@dimen/_16sdp"
         android:paddingEnd="@dimen/_16sdp"
         android:background="@color/login_background"
-        tools:context=".ui.fragments.register.fragments.screen4.Screen4Fragment">
+        tools:context=".ui.fragments.register.RegisterFragment">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/passwordTV"
+            android:id="@+id/userNameTV"
             android:layout_marginTop="@dimen/_32sdp"
             android:textColor="@color/loginTextFieldColor"
-            android:text="@string/password_string"
-            android:textSize="17sp"
+            android:text="Phone"
+            android:textSize="@dimen/_17sdp"
             android:fontFamily="@font/weight_400"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
@@ -35,40 +35,47 @@
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:id="@+id/passwordView"
+            android:id="@+id/phoneView"
             android:maxHeight="@dimen/_40sdp"
             android:orientation="horizontal"
             android:background="@drawable/shape_rec_border"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/passwordTV"
+            app:layout_constraintTop_toBottomOf="@+id/userNameTV"
             android:layout_marginTop="@dimen/_8sdp">
 
+            <com.hbb20.CountryCodePicker
+                android:id="@+id/ccp"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_gravity="center_vertical"
+                app:ccp_autoDetectCountry="true"
+                app:ccp_autoDetectLanguage="true"
+                app:ccp_defaultLanguage="ENGLISH"
+                app:ccp_showNameCode="false" />
+
             <EditText
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:maxHeight="@dimen/_40sdp"
-                android:inputType="textPassword"
-                android:id="@+id/passwordET"
-                android:text="@{viewmodel.item.password}"
-                android:imeOptions="actionDone"
+                android:id="@+id/phoneET"
+                android:text="@={viewmodel.item.phoneNumber}"
+                android:imeOptions="actionNext"
                 android:textColor="@color/loginTextFieldColor"
-                android:background="@android:color/transparent"
-                tools:ignore="LabelFor"
-                android:importantForAutofill="no" />
+                android:hint="101092022151"
+                android:background="@android:color/transparent" />
 
         </LinearLayout>
-
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@string/helper_text_screen4"
+            android:text="@string/helper_text_register"
             android:textColor="@color/colorHelperText"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/passwordView"
+            app:layout_constraintTop_toBottomOf="@+id/phoneView"
             android:layout_marginTop="@dimen/_16sdp" />
 
         <Button
@@ -77,14 +84,13 @@
             android:id="@+id/loginButton"
             app:backgroundTint="@null"
             android:onClick=
-                "@{() -> viewmodel.onNavigationClick(R.id.action_fragment_screen4_to_fragment_finish)"
-
+                "@{() -> viewmodel.onNavigationClick(R.id.action_fragment_register_to_fragment_otp)"
             android:background="@drawable/shape_login_button"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             android:layout_marginBottom="@dimen/_48sdp"
-            android:text="@string/finish_string"
+            android:text="Continue"
             android:elevation="4dp"
             android:translationZ="4dp"
             android:stateListAnimator="@null"
