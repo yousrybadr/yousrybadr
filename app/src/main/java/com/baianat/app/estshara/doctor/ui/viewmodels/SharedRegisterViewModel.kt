@@ -14,12 +14,11 @@ class SharedRegisterViewModel : ViewModel() {
     private val _navigateScreen = MutableLiveData<Event<Any>>()
     val navigateScreen : LiveData<Event<Any>> = _navigateScreen
 
-
     init {
         Log.e("sharedViewModel","Done")
     }
 
-    fun onNavigationClick(view: View, direction: Int){
+    fun onNavigationClick(direction: Int){
         _navigateScreen.value = Event(direction)
     }
 

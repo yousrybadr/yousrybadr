@@ -5,7 +5,7 @@
     <data>
         <variable
             name="viewmodel"
-            type="com.baianat.app.estshara.doctor.ui.fragments.app.login.LoginViewModel" />
+            type="com.baianat.app.estshara.doctor.ui.fragments.login.LoginViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

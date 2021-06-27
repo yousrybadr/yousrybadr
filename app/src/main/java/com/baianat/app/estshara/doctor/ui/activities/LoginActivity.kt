@@ -54,7 +54,8 @@ class LoginActivity : AppCompatActivity() {
         supportActionBar?.setDisplayShowTitleEnabled(false)
         setTitle("Login")
         binding.drawerLayoutLogin .apply {
-                setStatusBarBackground(R.drawable.shape_gradient_main)
+
+                //setStatusBarBackground(R.drawable.shape_gradient_main)
             }
     }
 

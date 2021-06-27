@@ -48,31 +48,25 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'com.google.android.material:material:1.3.0'
-
-    // recycler View
-    implementation 'androidx.recyclerview:recyclerview:1.2.1'
-    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.3.1'
-    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1'
-
+    implementation 'com.github.iwgang:countdownview:2.1.6' // CountDownView for timer
+    implementation 'com.hbb20:ccp:2.2.4'  // Country Code Picker Library    --> using Jcenter repo which is at end of life
+    implementation 'de.hdodenhof:circleimageview:3.1.0' // circle ImageView
+    implementation 'com.github.ybq:Android-SpinKit:1.4.0' // SpinKit For animated progress bar widget --> using Jcenter that is at end of life
+    implementation 'io.github.chaosleung:pinview:1.4.4' // Pin View imp
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'  // recycler View
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'// implementation for sdp library from github
     // Testing
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
-
-    // circle ImageView
-    implementation 'de.hdodenhof:circleimageview:3.1.0'
-
-    // SpinKit For animated progress bar widget
-    implementation 'com.github.ybq:Android-SpinKit:1.4.0'
     // retrofit
     def retrofit = "2.9.0"
     implementation "com.squareup.retrofit2:retrofit:$retrofit"
     implementation "com.squareup.retrofit2:converter-gson:$retrofit"
-    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit"
-    implementation "com.jakewharton.retrofit:retrofit2-rxjava2-adapter:1.0.0"
     implementation "com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.2"
-
+    //implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit"
+    //implementation "com.jakewharton.retrofit:retrofit2-rxjava2-adapter:1.0.0"
 
     // Room
     def room = "2.3.0"
@@ -82,50 +76,37 @@ dependencies {
 
     // lifeCycle - liveData - viewModel
     def lifecycle_version = "2.4.0-alpha02"
-    // ViewModel
-    implementation("androidx.lifecycle:lifecycle-viewmodel:$lifecycle_version")
-    // LiveData
-    implementation("androidx.lifecycle:lifecycle-livedata:$lifecycle_version")
-
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version")
     implementation "androidx.lifecycle:lifecycle-common-java8:$lifecycle_version"
-
-
-
-    // CountDownView for timer
-    implementation 'com.github.iwgang:countdownview:2.1.6'
-    // Country Code Picker Library
-    implementation 'com.hbb20:ccp:2.2.4'
-
-    // Pin View imp
-    implementation 'io.github.chaosleung:pinview:1.4.4'
 
     // Navigation Component
     def navigation = "2.3.5"
     implementation "androidx.navigation:navigation-fragment-ktx:$navigation"
     implementation "androidx.navigation:navigation-ui-ktx:$navigation"
 
-
-    // implementation for sdp library from github
-    implementation 'com.intuit.sdp:sdp-android:1.0.6'
-
     // google and firebase
-    implementation platform('com.google.firebase:firebase-bom:27.0.0')
-    // Declare the dependency for the Realtime Database library
-    implementation 'com.google.firebase:firebase-messaging:22.0.0'
-    implementation 'com.google.firebase:firebase-auth:21.0.1'
-    implementation 'com.google.android.gms:play-services-auth:19.0.0'
     // When using the BoM, you don't specify versions in Firebase library dependencies
-    implementation 'com.google.firebase:firebase-database-ktx:20.0.0'
+    def firebase_version_bom = "27.0.0"
+    implementation platform("com.google.firebase:firebase-bom:$firebase_version_bom")
+    implementation 'com.google.firebase:firebase-messaging'
+    implementation 'com.google.firebase:firebase-auth'
+    implementation 'com.google.android.gms:play-services-auth'
+    implementation 'com.google.firebase:firebase-database-ktx'
+    implementation 'com.google.firebase:firebase-storage-ktx'
+    implementation 'com.firebaseui:firebase-ui-database'
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+    implementation 'com.google.firebase:firebase-config-ktx'
 
-    // Declare the dependency for the Cloud Storage library
-    // When using the BoM, you don't specify versions in Firebase library dependencies
-    implementation 'com.google.firebase:firebase-storage-ktx:20.0.0'
+    def hilt_version = "2.28-alpha"
+    implementation "com.google.dagger:hilt-android:$hilt_version"
+    kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
 
-    // Firebase UI Library
-    implementation 'com.firebaseui:firebase-ui-database:7.1.1'
-    // Declare the dependencies for the Remote Config and Analytics libraries
-    implementation 'com.google.firebase:firebase-analytics-ktx:19.0.0'
+    def hilt_viewmodels = "1.0.0-alpha03"
+    implementation "androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03"
+    kapt "androidx.hilt:hilt-compiler:$hilt_viewmodels"
 
-    // When using the BoM, you don't specify versions in Firebase library dependencies
-    implementation 'com.google.firebase:firebase-config-ktx:21.0.0'
+    def fragment_ktx = "1.3.5"
+    implementation "androidx.fragment:fragment-ktx:$fragment_ktx"
+
 }

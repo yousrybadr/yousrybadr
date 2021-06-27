@@ -84,7 +84,7 @@
             android:id="@+id/loginButton"
             app:backgroundTint="@null"
             android:onClick=
-                "@{() -> viewmodel.onNavigationClick(R.id.action_fragment_register_to_fragment_otp)"
+                "@{()->viewmodel.onNavigationClick(R.id.action_fragment_register_to_fragment_otp)}"
             android:background="@drawable/shape_login_button"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
